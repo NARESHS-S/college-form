@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Data Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Student Academic Details</h1>
+
+    <form id="studentForm" action="submit.php" method="POST" onsubmit="return validateForm()">
+
+        <!-- Name -->
+        <label>Name</label>
+        <select name="name" required>
+            <option value="">Select Name</option>
+            <script>
+                const names = [
+                    "Aarav","Naresh","Akash","Ananya","Arjun","Bhavya","Charan","Deepak","Divya","Gaurav",
+                    "Harsha","Ishita","Karthik","Kavya","Lokesh","Meena","Naveen","Neha","Pooja","Prakash",
+                    "Rahul","Ravi","Riya","Sanjay","Sneha","Suresh","Tanvi","Uday","Varun","Vikas",
+                    "Yash","Zoya","Manoj","Anil","Sunita","Rekha","Ramesh","Sita","Kiran","Madhu",
+                    "Tejas","Shreya","Nikhil","Rohit","Payal","Komal","Alok","Suman","Priya","Amit"
+                ];
+                names.forEach(n => {
+                    document.write(`<option value="${n}">${n}</option>`);
+                });
+            </script>
+        </select>
+
+        
+        <label>Mobile Number</label>
+        <input type="number" name="mobile" required>
+
+        
+        <label>Address</label>
+        <input type="text" name="address" required>
+
+        
+        <label>Engineering Stream</label>
+        <select name="stream" required>
+            <option value="">Select Stream</option>
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>Mechanical</option>
+            <option>Civil</option>
+            <option>EEE</option>
+            <option>IT</option>
+        </select>
+
+        
+        <label>Year of Joining</label>
+        <select name="join_year" id="join_year" required></select>
+
+        <label>Year of Passing</label>
+        <select name="pass_year" id="pass_year" required></select>
+
+        
+        <h2>1st Semester Subjects</h2>
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Grade</th>
+            </tr>
+            <script>
+                for (let i = 1; i <= 6; i++) {
+                    document.write(`
+                        <tr>
+                            <td><input type="text" name="sub${i}_name" required></td>
+                            <td><input type="text" name="sub${i}_grade" required></td>
+                        </tr>
+                    `);
+                }
+            </script>
+        </table>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script src="script.js"></script>  
+</body>
+</html>

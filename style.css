@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f3f4;
+}
+
+.form-container {
+    width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #202124;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+table input {
+    width: 95%;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    background: #1a73e8;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1558b0;
+}
