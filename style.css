@@ -1,7 +1,16 @@
+/* ===============================
+   GLOBAL STYLING
+================================= */
+
 body {
-    font-family: Arial, sans-serif;
-    background: #f1f3f4;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f9;
 }
+
+/* ===============================
+   FORM PAGE (index.html)
+================================= */
 
 .form-container {
     width: 600px;
@@ -9,6 +18,7 @@ body {
     background: white;
     padding: 25px;
     border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 h1, h2 {
@@ -50,4 +60,68 @@ button {
 
 button:hover {
     background: #1558b0;
+}
+
+/* ===============================
+   RESULT PAGE (admin.php)
+================================= */
+
+.result-container {
+    width: 700px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.title {
+    text-align: center;
+    color: #1a73e8;
+    margin-bottom: 30px;
+}
+
+.details-card {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Subjects Table */
+.subject-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.subject-table th {
+    background-color: #1a73e8;
+    color: white;
+    padding: 12px;
+}
+
+.subject-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.subject-table tr:nth-child(even) {
+    background-color: #f2f6ff;
+}
+
+.row span:first-child {
+    font-weight: bold;
+    color: #333;
 }
